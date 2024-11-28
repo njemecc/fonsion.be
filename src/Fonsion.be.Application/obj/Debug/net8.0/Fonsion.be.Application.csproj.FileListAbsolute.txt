@@ -1,0 +1,15 @@
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Application.deps.json
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Application.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Application.pdb
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Domain.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Domain.pdb
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.csproj.AssemblyReference.cache
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.AssemblyInfoInputs.cache
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.AssemblyInfo.cs
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.csproj.CoreCompileInputs.cache
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.csproj.CopyComplete
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\refint\Fonsion.be.Application.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.pdb
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\ref\Fonsion.be.Application.dll

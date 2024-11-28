@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Fonsion.be.Application/1.0.0": {
+        "dependencies": {
+          "Fonsion.be.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Fonsion.be.Application.dll": {}
+        }
+      },
+      "Fonsion.be.Domain/1.0.0": {
+        "runtime": {
+          "Fonsion.be.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Fonsion.be.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fonsion.be.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
