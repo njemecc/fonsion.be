@@ -9,3 +9,4 @@ C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\F
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\refint\Fonsion.be.Domain.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\ref\Fonsion.be.Domain.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.sourcelink.json
