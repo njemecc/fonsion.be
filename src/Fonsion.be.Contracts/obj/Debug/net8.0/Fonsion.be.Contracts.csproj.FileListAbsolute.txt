@@ -9,3 +9,4 @@ C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Contracts\obj\Debug\net8.
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Contracts\obj\Debug\net8.0\refint\Fonsion.be.Contracts.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Contracts\obj\Debug\net8.0\Fonsion.be.Contracts.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Contracts\obj\Debug\net8.0\ref\Fonsion.be.Contracts.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Contracts\obj\Debug\net8.0\Fonsion.be.Contracts.sourcelink.json

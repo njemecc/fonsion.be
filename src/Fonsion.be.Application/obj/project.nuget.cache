@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oOnf9koPRudaey9Ntfeljuigds6wCuNonJNBj2xddeJr/AfIApM8b56LatLaQncMYHgOmla19SPaNvj9LcrFqw==",
+  "dgSpecHash": "0OUkRe/YWUwl8NbdPduehJatlTu5e/3gCw5dQzJzx3aEEF2ocn4aHDzxBlBBGydX3AaYZyvSQ+yjvd/EVfgX7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\brani\\.nuget\\packages\\erroror\\2.0.1\\erroror.2.0.1.nupkg.sha512",
+    "C:\\Users\\brani\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\brani\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\brani\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -13,3 +13,6 @@ C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\refint\Fonsion.be.Application.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\ref\Fonsion.be.Application.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\obj\Debug\net8.0\Fonsion.be.Application.sourcelink.json
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Contracts.dll
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Application\bin\Debug\net8.0\Fonsion.be.Contracts.pdb
