@@ -1,4 +1,5 @@
 ﻿using Fonsion.be.Application.Rooms.Commands;
+using Fonsion.be.Application.Rooms.Queries.GetAllRooms;
 using Fonsion.be.Contracts.Rooms;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -32,5 +33,18 @@ public class RoomController: ControllerBase
         return Ok(response);
 
 
+    }
+
+
+    [HttpGet]
+    [Route("/all")]
+    public async Task<IActionResult> GetAllRooms()
+    {
+
+        var query = new GetAllRoomsQuery();
+
+        var response = await _mediator.Send(query);
+
+        return Ok(response);
     }
 }
