@@ -1,12 +1,13 @@
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\bin\Debug\net8.0\Fonsion.be.Domain.deps.json
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\bin\Debug\net8.0\Fonsion.be.Domain.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\bin\Debug\net8.0\Fonsion.be.Domain.pdb
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.csproj.AssemblyReference.cache
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.AssemblyInfoInputs.cache
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.AssemblyInfo.cs
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.csproj.CoreCompileInputs.cache
+C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.sourcelink.json
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\refint\Fonsion.be.Domain.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\ref\Fonsion.be.Domain.dll
-C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Domain\obj\Debug\net8.0\Fonsion.be.Domain.sourcelink.json
