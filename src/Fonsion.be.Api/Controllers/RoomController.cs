@@ -2,13 +2,14 @@
 using Fonsion.be.Application.Rooms.Queries.GetAllRooms;
 using Fonsion.be.Contracts.Rooms;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fonsion.be.Api.Controllers;
 
 
 [ApiController]
-[Route("[controller]")]
+[Route("/api/[controller]")]
 public class RoomController: ControllerBase
 {
 
@@ -21,7 +22,7 @@ public class RoomController: ControllerBase
     }
 
 
-
+   
     [HttpPost]
 
     public async Task<IActionResult> CreateRoom(CreateRoomRequest request)
@@ -35,9 +36,8 @@ public class RoomController: ControllerBase
 
     }
 
-
+    
     [HttpGet]
-    [Route("/all")]
     public async Task<IActionResult> GetAllRooms()
     {
 
