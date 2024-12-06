@@ -45,23 +45,51 @@ builder.Services.AddSwaggerGen(options =>
 //add controllers
 builder.Services.AddControllers();
 
-//auth i authorization
-
-builder.Services.AddAuthentication().AddBearerToken(IdentityConstants.BearerScheme);
-builder.Services.AddAuthorization();
-
 
 
 //add application and infrastructure dependencies
 var connectionString = builder.Configuration.GetConnectionString("MysqlConnection");
 if (connectionString != null) builder.Services.AddInfrastructure(connectionString);
+builder.Services.AddApplication();
+
 
 //Identity
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<FonsionDbContext>()
-    .AddDefaultTokenProviders().AddApiEndpoints();
+    .AddDefaultTokenProviders();
 
-builder.Services.AddApplication();
+// Authentication configuration
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultForbidScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])
+            )
+        };
+    });
+
+
+// Authorization
+builder.Services.AddAuthorization();
+
+
+
 
 
 
@@ -76,8 +104,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//this gives us endpoints to the identity api methods
-app.MapIdentityApi<User>();
+app.UseAuthentication();
+app.UseAuthorization();
+ 
 
 app.MapControllers();
 app.Run();
