@@ -19,7 +19,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Fonsion.be.Application\Fonsion.be.Application.csproj" />
-      <ProjectReference Include="..\Fonsion.be.Contracts\Fonsion.be.Contracts.csproj" />
       <ProjectReference Include="..\Fonsion.be.Infrastructure\Fonsion.be.Infrastructure.csproj" />
     </ItemGroup>
 

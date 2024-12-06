@@ -37,6 +37,7 @@ public class RoomController: ControllerBase
     }
 
     
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetAllRooms()
     {

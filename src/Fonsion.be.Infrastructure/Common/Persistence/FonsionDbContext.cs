@@ -18,6 +18,22 @@ public class FonsionDbContext: IdentityDbContext<User,IdentityRole,string>, IUni
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+
+        List<IdentityRole> roles = new List<IdentityRole>
+        {
+            new IdentityRole
+            {
+                Name = "Admin",
+                NormalizedName = "ADMIN"
+            },
+            new IdentityRole
+            {
+                Name = "Guest",
+                NormalizedName = "GUEST"
+            },
+        };
+
+        builder.Entity<IdentityRole>().HasData(roles);
     }
 
     public DbSet<Room> Rooms { get; set; } = null!;

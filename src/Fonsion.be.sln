@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fonsion.be.Api", "Fonsion.be.Api\Fonsion.be.Api.csproj", "{92325B8F-CCDA-4CA5-BF98-CDE885972106}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fonsion.be.Contracts", "Fonsion.be.Contracts\Fonsion.be.Contracts.csproj", "{D43BC77D-0A87-4E5C-A3C8-0C6A8C91DD4E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fonsion.be.Application", "Fonsion.be.Application\Fonsion.be.Application.csproj", "{8935E25E-D159-4BCB-A1A1-37F2B0E696A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fonsion.be.Domain", "Fonsion.be.Domain\Fonsion.be.Domain.csproj", "{07B77E7E-CE3F-40EB-BAA4-79E5CAB3C159}"
@@ -20,10 +18,6 @@ Global
 		{92325B8F-CCDA-4CA5-BF98-CDE885972106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92325B8F-CCDA-4CA5-BF98-CDE885972106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92325B8F-CCDA-4CA5-BF98-CDE885972106}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D43BC77D-0A87-4E5C-A3C8-0C6A8C91DD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D43BC77D-0A87-4E5C-A3C8-0C6A8C91DD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D43BC77D-0A87-4E5C-A3C8-0C6A8C91DD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D43BC77D-0A87-4E5C-A3C8-0C6A8C91DD4E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8935E25E-D159-4BCB-A1A1-37F2B0E696A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8935E25E-D159-4BCB-A1A1-37F2B0E696A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8935E25E-D159-4BCB-A1A1-37F2B0E696A6}.Release|Any CPU.ActiveCfg = Release|Any CPU

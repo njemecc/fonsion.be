@@ -31,9 +31,6 @@
               "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
                 "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj"
               },
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj"
-              },
               "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj"
               }
@@ -116,9 +113,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj"
-              },
               "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj": {
                 "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj"
               }
@@ -146,63 +140,16 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj",
-        "projectName": "Fonsion.be.Contracts",
-        "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\Fonsion.be.Contracts.csproj",
-        "packagesPath": "C:\\Users\\brani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Contracts\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\brani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
