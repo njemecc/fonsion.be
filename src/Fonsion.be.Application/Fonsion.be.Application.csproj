@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fonsion.be.Contracts\Fonsion.be.Contracts.csproj" />
       <ProjectReference Include="..\Fonsion.be.Domain\Fonsion.be.Domain.csproj" />
     </ItemGroup>
 
@@ -15,10 +14,14 @@
       <PackageReference Include="ErrorOr" Version="2.0.1" />
       <PackageReference Include="MediatR" Version="12.4.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.0.3" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Common\Dtos\" />
+      <Reference Include="Microsoft.AspNetCore.Identity">
+        <HintPath>..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.0\Microsoft.AspNetCore.Identity.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

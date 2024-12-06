@@ -88,11 +88,9 @@ C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\tr\M
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Application.dll
-C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Contracts.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Domain.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Infrastructure.dll
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Application.pdb
-C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Contracts.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Infrastructure.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Domain.pdb
 C:\Users\brani\RiderProjects\Fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\Fonsion.be.Api.csproj.AssemblyReference.cache
