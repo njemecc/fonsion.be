@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Fonsion.be.Application.Common.Interfaces;
+using Fonsion.be.Application.Common.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Fonsion.be.Application;
 
@@ -10,6 +12,8 @@ public static class DependencyInjection
         {
             options.RegisterServicesFromAssemblyContaining(typeof(DependencyInjection));
         });
+
+        services.AddScoped<ITokenService, TokenService>();
 
         return services;
     }
