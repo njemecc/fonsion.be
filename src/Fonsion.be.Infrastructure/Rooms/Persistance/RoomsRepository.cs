@@ -26,4 +26,9 @@ public class RoomsRepository : IRoomsRepository
     {
      return await _dbContext.Rooms.ToListAsync();
     }
+
+    public async Task<Room?> GetRoomById(Guid roomId)
+    {
+        return await _dbContext.Rooms.FirstOrDefaultAsync(r => r.Id == roomId);
+    }
 }
