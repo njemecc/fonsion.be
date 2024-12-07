@@ -48,6 +48,84 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.ToTable("Rooms");
                 });
 
+            modelBuilder.Entity("Fonsion.be.Domain.GuestCompanion.GuestCompanion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<Guid>("ReservationId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservationId");
+
+                    b.ToTable("GuestCompanions");
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.PromoCodes.PromoCode", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PromoCodes");
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.Reservations.Reservation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("FromDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("PromoCodeId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("RoomId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("ToDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
+                    
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PromoCodeId");
+
+                    b.HasIndex("RoomId");
+
+                  
+
+                    b.ToTable("Reservations");
+                });
+
             modelBuilder.Entity("Fonsion.be.Domain.Users.User", b =>
                 {
                     b.Property<string>("Id")
@@ -148,13 +226,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "99d410b6-09d9-4ac3-b7db-6be289be99ed",
+                            Id = "f1791259-37d5-4a66-8920-ae681b795cf6",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "9855c8de-3230-466c-a1da-4ed30223a069",
+                            Id = "1afae6f7-9525-4be6-a69c-59b447feac77",
                             Name = "Guest",
                             NormalizedName = "GUEST"
                         });
@@ -260,6 +338,38 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.GuestCompanion.GuestCompanion", b =>
+                {
+                    b.HasOne("Fonsion.be.Domain.Reservations.Reservation", "Reservation")
+                        .WithMany()
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reservation");
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.Reservations.Reservation", b =>
+                {
+                    b.HasOne("Fonsion.be.Domain.PromoCodes.PromoCode", "PromoCode")
+                        .WithMany()
+                        .HasForeignKey("PromoCodeId");
+
+                    b.HasOne("Fonsion.be.Domain.Entities.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                  
+
+                    b.Navigation("PromoCode");
+
+                    b.Navigation("Room");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
