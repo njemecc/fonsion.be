@@ -8,4 +8,6 @@ public interface IRoomsRepository
     Task AddRoomAsync(Room room);
 
     Task<List<Room>> GetAllRoomsAsync();
+
+    Task<Room?> GetRoomById(Guid roomId);
 }
