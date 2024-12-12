@@ -1,6 +1,7 @@
 ﻿using Fonsion.be.Application.Common.Interfaces;
 using Fonsion.be.Domain.Entities;
 using Fonsion.be.Domain.GuestCompanion;
+using Fonsion.be.Domain.Images;
 using Fonsion.be.Domain.PromoCodes;
 using Fonsion.be.Domain.Reservations;
 using Fonsion.be.Domain.Users;
@@ -44,6 +45,7 @@ public class FonsionDbContext: IdentityDbContext<User,IdentityRole,string>, IUni
     public DbSet<GuestCompanion> GuestCompanions { get; set; }
     public DbSet<PromoCode> PromoCodes { get; set; }
     
+    public DbSet<Image> Images { get; set; }
     
     public async Task CommitChangesAsync()
     {
