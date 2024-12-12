@@ -13,7 +13,6 @@ public static class RoomsMapper
             Id = Guid.NewGuid(),
             Name = createRoomRequest.Name,
             Description = createRoomRequest.Description,
-            ImageUrl = createRoomRequest.ImageUrl,
             Capacity = createRoomRequest.Capacity,
             PricePerNight = createRoomRequest.pricePerNight
 
@@ -22,7 +21,7 @@ public static class RoomsMapper
 
     public static CreateRoomResponse FromModelToResponse(this Room room)
     {
-        return new CreateRoomResponse(room.Name, room.Capacity, room.PricePerNight, room.Description, room.ImageUrl);
+        return new CreateRoomResponse(room.Name, room.Capacity, room.PricePerNight, room.Description);
     }
     
 }
