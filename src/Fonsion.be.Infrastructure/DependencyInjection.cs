@@ -3,6 +3,7 @@ using Fonsion.be.Application.Common.Interfaces;
 using Fonsion.be.Domain.Reservations;
 using Fonsion.be.Infrastructure.Common.Persistence;
 using Fonsion.be.Infrastructure.GuestCompanions.Persistance;
+using Fonsion.be.Infrastructure.Images.Persistance;
 using Fonsion.be.Infrastructure.PromoCodes.Persistance;
 using Fonsion.be.Infrastructure.Reservations.Persistence;
 using Fonsion.be.Infrastructure.Rooms.Persistance;
@@ -23,6 +24,7 @@ public static class DependencyInjection
         services.AddScoped<IPromoCodeRepository, PromoCodeRepository>();
         services.AddScoped<IReservationsRepository, ReservationsRepository>();
         services.AddScoped<IRoomsRepository,RoomsRepository>();
+        services.AddScoped<IImagesRepository, ImagesRepository>();
         
 
         return services;
