@@ -1,38 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj": {}
+    "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj": {
+    "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj",
+        "projectUniqueName": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj",
         "projectName": "Fonsion.be.Api",
-        "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj",
-        "packagesPath": "C:\\Users\\brani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Api\\obj\\",
+        "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj",
+        "packagesPath": "C:\\Users\\njeme\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\njeme\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj"
+              "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
+                "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj"
               },
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj"
+              "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj"
               }
             }
           }
@@ -41,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -85,36 +88,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
+    "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj",
+        "projectUniqueName": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj",
         "projectName": "Fonsion.be.Application",
-        "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj",
-        "packagesPath": "C:\\Users\\brani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\obj\\",
+        "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj",
+        "packagesPath": "C:\\Users\\njeme\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\njeme\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj"
+              "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj": {
+                "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj"
               }
             }
           }
@@ -123,6 +124,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -136,6 +142,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -166,28 +176,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj": {
+    "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj",
         "projectName": "Fonsion.be.Domain",
-        "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj",
-        "packagesPath": "C:\\Users\\brani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Domain\\obj\\",
+        "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\Fonsion.be.Domain.csproj",
+        "packagesPath": "C:\\Users\\njeme\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\njeme\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -200,6 +208,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -227,36 +240,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj": {
+    "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj",
         "projectName": "Fonsion.be.Infrastructure",
-        "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\brani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\Fonsion.be.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\njeme\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\brani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\njeme\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
-                "projectPath": "C:\\Users\\brani\\RiderProjects\\Fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj"
+              "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj": {
+                "projectPath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Application\\Fonsion.be.Application.csproj"
               }
             }
           }
@@ -265,6 +276,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -300,7 +316,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

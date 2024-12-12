@@ -32,10 +32,6 @@ namespace Fonsion.be.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -70,6 +66,24 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasIndex("ReservationId");
 
                     b.ToTable("GuestCompanions");
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.Images.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("RoomId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Fonsion.be.Domain.PromoCodes.PromoCode", b =>
@@ -113,15 +127,11 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("char(36)");
 
-                    
-
                     b.HasKey("Id");
 
                     b.HasIndex("PromoCodeId");
 
                     b.HasIndex("RoomId");
-
-                  
 
                     b.ToTable("Reservations");
                 });
@@ -226,13 +236,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "f1791259-37d5-4a66-8920-ae681b795cf6",
+                            Id = "325fb4d7-ba29-483d-b2fe-e41fe1d6e583",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "1afae6f7-9525-4be6-a69c-59b447feac77",
+                            Id = "59ad11c5-433a-4978-9513-24a59a2d1ead",
                             Name = "Guest",
                             NormalizedName = "GUEST"
                         });
@@ -363,13 +373,9 @@ namespace Fonsion.be.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                  
-
                     b.Navigation("PromoCode");
 
                     b.Navigation("Room");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
