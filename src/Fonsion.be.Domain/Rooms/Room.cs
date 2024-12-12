@@ -11,6 +11,4 @@ public class Room
     public decimal PricePerNight { get; set; }
     
     public String Description { get; set; }
-
-    public String ImageUrl { get; set; }
 }
