@@ -23,5 +23,10 @@ public static class RoomsMapper
     {
         return new CreateRoomResponse(room.Name, room.Capacity, room.PricePerNight, room.Description);
     }
+
+    public static RoomDto ToDto(this Room room)
+    {
+        return new RoomDto(room.Id, room.Name, room.Capacity, room.PricePerNight, room.Description,room.Images.Select(i => i.Url).ToList());
+    }
     
 }
