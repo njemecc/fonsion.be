@@ -83,6 +83,8 @@ namespace Fonsion.be.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoomId");
+
                     b.ToTable("Images");
                 });
 
@@ -236,13 +238,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "325fb4d7-ba29-483d-b2fe-e41fe1d6e583",
+                            Id = "fbefa7f0-eac9-4073-8588-815b8ab3c19a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "59ad11c5-433a-4978-9513-24a59a2d1ead",
+                            Id = "ee8f3a27-289c-4821-9a71-5f58a566df67",
                             Name = "Guest",
                             NormalizedName = "GUEST"
                         });
@@ -361,6 +363,15 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.Navigation("Reservation");
                 });
 
+            modelBuilder.Entity("Fonsion.be.Domain.Images.Image", b =>
+                {
+                    b.HasOne("Fonsion.be.Domain.Entities.Room", null)
+                        .WithMany("Images")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Fonsion.be.Domain.Reservations.Reservation", b =>
                 {
                     b.HasOne("Fonsion.be.Domain.PromoCodes.PromoCode", "PromoCode")
@@ -368,7 +379,7 @@ namespace Fonsion.be.Infrastructure.Migrations
                         .HasForeignKey("PromoCodeId");
 
                     b.HasOne("Fonsion.be.Domain.Entities.Room", "Room")
-                        .WithMany()
+                        .WithMany("Reservations")
                         .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -427,6 +438,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Fonsion.be.Domain.Entities.Room", b =>
+                {
+                    b.Navigation("Images");
+
+                    b.Navigation("Reservations");
                 });
 #pragma warning restore 612, 618
         }

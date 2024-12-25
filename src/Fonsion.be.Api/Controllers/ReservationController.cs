@@ -1,5 +1,6 @@
 ﻿using Fonsion.be.Application.Common.Dtos.Reservations;
 using Fonsion.be.Application.Reservations.Commands.CreateReservation;
+using Fonsion.be.Application.Reservations.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,17 @@ public class ReservationController : ControllerBase
         return Ok(response);
 
 
+    }
+    
+    [HttpGet("occupied-dates/{roomId}")]
+
+    public async Task<IActionResult> GetReservedDaysByRoomId(Guid roomId)
+    {
+        var query = new GetReservedDatesByRoomIdQuery(roomId);
+        
+        var response = await _mediator.Send(query);
+        
+        return Ok(response);
     }
     
 }

@@ -1,4 +1,5 @@
-﻿using Fonsion.be.Application.Rooms.Commands;
+﻿using Fonsion.be.Application.Common.Helpers;
+using Fonsion.be.Application.Rooms.Commands;
 using Fonsion.be.Application.Rooms.Queries.GetAllRooms;
 using Fonsion.be.Contracts.Rooms;
 using MediatR;
@@ -37,15 +38,18 @@ public class RoomController: ControllerBase
     }
 
     
-    [Authorize]
-    [HttpGet]
-    public async Task<IActionResult> GetAllRooms()
+    [HttpGet("/api/room/{fromDate?}/{toDate?}")]
+    public async Task<IActionResult> GetAllRooms([FromRoute] DateTime? fromDate, [FromRoute] DateTime? toDate)
     {
+        
+        var queryObject = new QueryObject() { FromDate = fromDate, ToDate = toDate };
 
-        var query = new GetAllRoomsQuery();
+        var query = new GetAllRoomsQuery(queryObject);
 
         var response = await _mediator.Send(query);
 
         return Ok(response);
     }
+
+ 
 }
