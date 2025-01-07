@@ -38,11 +38,17 @@ public class RoomController: ControllerBase
     }
 
     
-    [HttpGet("/api/room/{fromDate?}/{toDate?}")]
-    public async Task<IActionResult> GetAllRooms([FromRoute] DateTime? fromDate, [FromRoute] DateTime? toDate)
+    [HttpGet]
+    public async Task<IActionResult> GetAllRooms([FromQuery] DateTime? fromDate, [FromQuery] DateTime? toDate, [FromQuery] int page = 0, [FromQuery] int pageSize = 5)
     {
         
-        var queryObject = new QueryObject() { FromDate = fromDate, ToDate = toDate };
+        var queryObject = new QueryObject
+        {
+            FromDate = fromDate,
+            ToDate = toDate,
+            Page = page,
+            PageSize = pageSize
+        };
 
         var query = new GetAllRoomsQuery(queryObject);
 
