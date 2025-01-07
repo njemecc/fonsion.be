@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Fonsion.be.Application.Rooms.Queries.GetAllRooms;
 
-public class GetAllRoomsQueryHandler: IRequestHandler<GetAllRoomsQuery,ErrorOr<List<RoomDto>>>
+public class GetAllRoomsQueryHandler: IRequestHandler<GetAllRoomsQuery,ErrorOr<PaginatedResult<RoomDto>>>
 {
     private readonly IRoomsRepository _roomsRepository;
 
@@ -16,17 +16,23 @@ public class GetAllRoomsQueryHandler: IRequestHandler<GetAllRoomsQuery,ErrorOr<L
         _roomsRepository = roomsRepository;
     }
 
-    public async Task<ErrorOr<List<RoomDto>>> Handle(GetAllRoomsQuery request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<PaginatedResult<RoomDto>>> Handle(GetAllRoomsQuery request, CancellationToken cancellationToken)
     {
-        var rooms = await _roomsRepository.GetAllRoomsAsync(request.QueryObject);
+        var paginatedResultRooms = await _roomsRepository.GetAllRoomsAsync(request.QueryObject);
         
-        if (rooms == null)
+        if (paginatedResultRooms.Items == null)
         {
             return Error.NotFound("No rooms found.");
         }
 
-        var roomDtos = rooms.Select(room => room.ToDto()).ToList();
+        //var roomDtos = rooms.Select(room => room.ToDto()).ToList();
+        
+        var paginatedResult = new PaginatedResult<RoomDto>
+        {
+            TotalCount = paginatedResultRooms.TotalCount,
+            Items = paginatedResultRooms.Items.Select(r => r.ToDto()).ToList()
+        };
 
-        return roomDtos;
+        return paginatedResult;
     }
 }
