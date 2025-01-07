@@ -1,5 +1,6 @@
 ﻿using Fonsion.be.Application.Common.Helpers;
 using Fonsion.be.Application.Common.Interfaces;
+using Fonsion.be.Contracts.Rooms;
 using Fonsion.be.Domain.Entities;
 using Fonsion.be.Infrastructure.Common.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -22,10 +23,12 @@ public class RoomsRepository : IRoomsRepository
     
     }
 
-    public async Task<List<Room>> GetAllRoomsAsync(QueryObject? queryObject)
+    public async Task<PaginatedResult<Room>> GetAllRoomsAsync(QueryObject? queryObject)
     {
         var fromDate = queryObject?.FromDate;
         var toDate = queryObject?.ToDate;
+        var page = queryObject?.Page ?? 0;  
+        var pageSize = queryObject?.PageSize ?? 5;  
 
         var query = _dbContext.Rooms
             .Include(room => room.Images)
@@ -34,11 +37,23 @@ public class RoomsRepository : IRoomsRepository
 
         if (fromDate.HasValue && toDate.HasValue)
         {
-            query = query.Where(room => room.Reservations.All(reservation =>
-                reservation.ToDate < fromDate || reservation.FromDate > toDate));
+            query = query.Where(room => !room.Reservations.Any(reservation =>
+                reservation.ToDate >= fromDate && reservation.FromDate <= toDate));
         }
 
-        return await query.ToListAsync();
+        // Paginacija
+        var rooms = await query
+            .Skip(page * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        var paginatedResult = new PaginatedResult<Room>
+        {
+            Items = rooms,
+            TotalCount = query.Count()
+        };
+
+        return paginatedResult;
     }
 
 
