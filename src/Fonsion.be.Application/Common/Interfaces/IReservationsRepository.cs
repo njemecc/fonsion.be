@@ -9,6 +9,8 @@ public interface IReservationsRepository
     Task<IEnumerable<Reservation>> GetReservationsForRoomAsync(Guid roomId);
     
     Task<List<string>> GetReservedDatesByRoomIdAsync(Guid roomId);
+    
+    Task<List<Reservation>> GetReservationsForUserAsync(Guid userId);
 
 
 }

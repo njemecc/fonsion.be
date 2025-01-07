@@ -16,7 +16,7 @@ public class ReservationsRepository : IReservationsRepository
 
     public async Task AddReservationAsync(Reservation reservation)
     {
-         await _dbContext.Reservations.AddAsync(reservation);
+        await _dbContext.Reservations.AddAsync(reservation);
     }
 
     public async Task<IEnumerable<Reservation>> GetReservationsForRoomAsync(Guid roomId)
@@ -44,4 +44,14 @@ public class ReservationsRepository : IReservationsRepository
 
         return occupiedDates;
     }
+
+    public async Task<List<Reservation>> GetReservationsForUserAsync(Guid userId)
+    {
+        return await _dbContext.Reservations
+            .Where(r => r.UserId == userId)
+            .Include(r => r.Room)
+            .ThenInclude(room => room.Images)
+            .ToListAsync();
+    }
+
 }
