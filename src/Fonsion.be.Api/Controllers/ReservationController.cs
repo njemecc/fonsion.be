@@ -1,4 +1,5 @@
 ﻿using Fonsion.be.Application.Common.Dtos.Reservations;
+using Fonsion.be.Application.Reservations.Commands.CancelReservation;
 using Fonsion.be.Application.Reservations.Commands.CreateReservation;
 using Fonsion.be.Application.Reservations.Queries;
 using Fonsion.be.Application.Reservations.Queries.GetReservationsByUserId;
@@ -55,4 +56,14 @@ public class ReservationController : ControllerBase
         return Ok(response);
     }
     
+    [HttpGet("cancelReservation/{reservationId}")]
+    public async Task<IActionResult> CancelReservation(Guid reservationId)
+    {
+        var command = new CancelReservationCommand(reservationId);
+
+        var response = await _mediator.Send(command);
+
+        return Ok(response);
+        
+    }
 }
