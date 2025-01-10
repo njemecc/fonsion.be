@@ -120,6 +120,9 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.Property<Guid>("RoomId")
                         .HasColumnType("char(36)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("ToDate")
                         .HasColumnType("datetime(6)");
 
@@ -238,13 +241,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "fbefa7f0-eac9-4073-8588-815b8ab3c19a",
+                            Id = "850c29e5-5d6e-4a5d-b22d-fcd9838ea7cb",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "ee8f3a27-289c-4821-9a71-5f58a566df67",
+                            Id = "4e2b75bc-e540-45e7-964c-fd4362618054",
                             Name = "Guest",
                             NormalizedName = "GUEST"
                         });
