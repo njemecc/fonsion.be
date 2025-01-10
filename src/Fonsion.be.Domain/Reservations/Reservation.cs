@@ -1,4 +1,5 @@
-﻿using Fonsion.be.Domain.Entities;
+﻿using Fonsion.be.Application.Common.Enums.Reservation;
+using Fonsion.be.Domain.Entities;
 using Fonsion.be.Domain.PromoCodes;
 using Fonsion.be.Domain.Users;
 
@@ -13,6 +14,8 @@ public class Reservation
     public DateTime ToDate { get; set; }
     
     public decimal TotalPrice { get; set; }
+
+    public ReservationStatus Status { get; set; } = ReservationStatus.Active;
 
     public Guid UserId { get; set; }
     
