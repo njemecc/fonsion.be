@@ -1,5 +1,6 @@
 ﻿using ErrorOr;
 using Fonsion.be.Application.Common.Dtos.Reservations;
+using Fonsion.be.Application.Common.Enums.Reservation;
 using Fonsion.be.Application.Common.Interfaces;
 using Fonsion.be.Domain.GuestCompanion;
 using Fonsion.be.Domain.Reservations;
@@ -83,6 +84,7 @@ public class CreateReservationCommandHandler : IRequestHandler<CreateReservation
 
         var newReservation = new Reservation
         {
+            Status = ReservationStatus.Active,
             UserId = request.CreateReservationRequest.UserId,
             RoomId = request.CreateReservationRequest.RoomId,
             FromDate = request.CreateReservationRequest.FromDate,
