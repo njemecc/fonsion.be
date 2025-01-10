@@ -1,4 +1,6 @@
-﻿using Fonsion.be.Application.Common.Interfaces;
+﻿using ErrorOr;
+using Fonsion.be.Application.Common.Enums.Reservation;
+using Fonsion.be.Application.Common.Interfaces;
 using Fonsion.be.Domain.Reservations;
 using Fonsion.be.Infrastructure.Common.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -52,6 +54,35 @@ public class ReservationsRepository : IReservationsRepository
             .Include(r => r.Room)
             .ThenInclude(room => room.Images)
             .ToListAsync();
+    }
+
+    public async Task<ErrorOr<Reservation>> CancelReservationAsync(Guid reservationId)
+    {
+        var reservation = await _dbContext.Reservations
+            .Include(r => r.PromoCode) 
+            .FirstOrDefaultAsync(r => r.Id == reservationId);
+        if (reservation == null)
+        {
+            return Error.NotFound("Reservation not found.");
+        }
+
+        if (reservation.Status == ReservationStatus.Canceled)
+        {
+            return Error.Conflict("Reservation is already canceled.");
+        }
+
+       
+        var daysUntilStart = (reservation.FromDate - DateTime.UtcNow).TotalDays;
+        
+        if (daysUntilStart < 5)
+        {
+            return Error.Validation("Cannot cancel reservation less than 5 days before start date.");
+        }
+        
+        reservation.Status = ReservationStatus.Canceled;
+        await _dbContext.SaveChangesAsync();
+
+        return reservation;
     }
 
 }
