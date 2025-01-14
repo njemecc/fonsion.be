@@ -9,4 +9,6 @@ public class User : IdentityUser
     
     public string LastName { get; set; }
     
+    public string ClerkId { get; set; }
+    
 }
