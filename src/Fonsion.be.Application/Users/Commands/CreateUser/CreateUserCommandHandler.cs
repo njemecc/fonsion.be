@@ -31,8 +31,7 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand,ErrorO
 
             var createdUser = await _userManager.CreateAsync(user, request.CreateUserRequest.Password);
 
-            if (createdUser.Succeeded)
-            {
+            if (createdUser.Succeeded) {
                 var roleResult = await _userManager.AddToRoleAsync(user, "Guest");
 
                 await _unitOfWork.CommitChangesAsync();
