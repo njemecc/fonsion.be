@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "j5rK5lNT+eU=",
+  "dgSpecHash": "ffKZzx6ncPU=",
   "success": true,
   "projectFilePath": "C:\\Users\\njeme\\Master\\fpis\\fonsion.be\\src\\Fonsion.be.Api\\Fonsion.be.Api.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,8 @@
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\8.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.8.0.0.nupkg.sha512",
+    "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.0\\microsoft.aspnetcore.jsonpatch.8.0.0.nupkg.sha512",
+    "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
@@ -33,6 +35,7 @@
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0\\microsoft.codeanalysis.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\4.5.0\\microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.5.0\\microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\njeme\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0\\microsoft.entityframeworkcore.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0\\microsoft.entityframeworkcore.analyzers.8.0.0.nupkg.sha512",
@@ -67,6 +70,8 @@
     "C:\\Users\\njeme\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\njeme\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\njeme\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.0\\pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\njeme\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
