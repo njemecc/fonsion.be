@@ -1,5 +1,6 @@
 using System.Text;
 using Fonsion.be.Application;
+using Fonsion.be.Application.Common.Interfaces;
 using Fonsion.be.Domain.Users;
 using Fonsion.be.Infrastructure;
 using Fonsion.be.Infrastructure.Common.Persistence;
@@ -52,6 +53,7 @@ var connectionString = builder.Configuration.GetConnectionString("MysqlConnectio
 if (connectionString != null) builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddApplication();
 
+builder.Services.AddHttpClient<IClerkService, ClerkService>();
 
 //Identity
 builder.Services.AddIdentity<User, IdentityRole>()
