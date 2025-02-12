@@ -149,6 +149,10 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("ClerkId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
@@ -241,13 +245,13 @@ namespace Fonsion.be.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "850c29e5-5d6e-4a5d-b22d-fcd9838ea7cb",
+                            Id = "adc1dab1-2ef1-4acc-a84c-06a8d0565a2c",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "4e2b75bc-e540-45e7-964c-fd4362618054",
+                            Id = "41ca6711-b8f0-492d-897b-15f05db114a8",
                             Name = "Guest",
                             NormalizedName = "GUEST"
                         });
