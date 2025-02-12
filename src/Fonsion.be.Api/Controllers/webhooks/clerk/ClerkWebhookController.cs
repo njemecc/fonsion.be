@@ -1,185 +1,134 @@
-﻿using Fonsion.be.Domain.Users;
+﻿using System.Net;
+using System.Text.Json;
+using System.IO;
+using Fonsion.be.Domain.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography;
-using System.Text;
-using JsonSerializer = System.Text.Json.JsonSerializer;
+using Microsoft.Extensions.Configuration;
+using Svix;
+using Svix.Exceptions;
+using Fonsion.be.Application.Common.Dtos.WebHook.Clerk;
+using System.Linq;
+using Fonsion.be.Application.Common.Dtos.Users;
+using Fonsion.be.Application.Common.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace Fonsion.be.Api.Controllers.webhooks.clerk;
-
-[ApiController]
-[Route("api/webhooks/clerk")]
-public class ClerkWebhookController : ControllerBase
+namespace Fonsion.be.Api.Controllers.Webhooks.Clerk
 {
-    private readonly UserManager<User> _userManager;
-    private readonly IConfiguration _configuration;
-
-    public ClerkWebhookController(UserManager<User> userManager, IConfiguration configuration)
+    [ApiController]
+    [Route("api/webhooks/clerk")]
+    public class ClerkWebhookController : ControllerBase
     {
-        _userManager = userManager;
-        _configuration = configuration;
-    }
+        private readonly UserManager<User> _userManager;
+        private readonly IConfiguration _configuration;
+        private readonly IClerkService _clerkService;
 
-    [HttpPost]
-    public async Task<IActionResult> HandleWebhook()
-    {
-        var webhookSecret = _configuration["Clerk:WebhookSecret"];
-        if (string.IsNullOrEmpty(webhookSecret))
+        public ClerkWebhookController(UserManager<User> userManager, IConfiguration configuration, IClerkService clerkService)
         {
-            return BadRequest("Webhook secret is not configured.");
+            _userManager = userManager;
+            _configuration = configuration;
+            _clerkService = clerkService;
         }
 
-        var requestBody = await new StreamReader(Request.Body).ReadToEndAsync();
-        var svixId = Request.Headers["svix-id"].ToString();
-        var svixTimestamp = Request.Headers["svix-timestamp"].ToString();
-        var svixSignature = Request.Headers["svix-signature"].ToString();
-
-        if (string.IsNullOrEmpty(svixId) || string.IsNullOrEmpty(svixTimestamp) || string.IsNullOrEmpty(svixSignature))
+        [HttpPost]
+        public async Task<IActionResult> HandleWebhook()
         {
-            return BadRequest("Missing webhook headers.");
-        }
-
-        // Log for debugging
-        Console.WriteLine($"Request Body: {requestBody}");
-        Console.WriteLine($"Svix ID: {svixId}");
-        Console.WriteLine($"Svix Timestamp: {svixTimestamp}");
-        Console.WriteLine($"Svix Signature: {svixSignature}");
-
-        // if (!VerifySignature(requestBody, svixId, svixTimestamp, svixSignature, webhookSecret))
-        // {
-        //     return Unauthorized("Invalid webhook signature.");
-        // }
-
-        var webhookEvent = JsonSerializer.Deserialize<ClerkWebhookEvent>(requestBody);
-        if (webhookEvent == null)
-        {
-            return BadRequest("Invalid webhook payload.");
-        }
-
-        switch (webhookEvent.Type)
-        {
-            case "user.created":
-                var email = webhookEvent.Data.EmailAddresses?.FirstOrDefault()?.EmailAddresss;
-                var user = new User
-                {
-                    Email = email,
-                    FirstName = webhookEvent.Data.FirstName,
-                    LastName = webhookEvent.Data.LastName,
-                    ClerkId = webhookEvent.Data.Id,
-                    
-                };
-                await _userManager.CreateAsync(user);
-                break;
-
-            default:
-                return Ok("Event type not handled.");
-        }
-
-        return Ok("Webhook processed successfully.");
-    }
-
-   
-    private bool VerifySignature(string payload, string svixId, string svixTimestamp, string svixSignature, string secret)
-    {
-        try
-        {
-            // Prepare timestamped payload
-            var timestampedPayload = $"{svixId}.{svixTimestamp}.{payload}";
-            Console.WriteLine($"Timestamped Payload: {timestampedPayload}");
-
-            // Decode secret from Base64 to byte array
-            var secretBytes = Convert.FromBase64String(secret);
-
-            // Compute HMAC SHA256 hash
-            using var hmac = new HMACSHA256(secretBytes);
-            var computedSignature = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(timestampedPayload)));
-            Console.WriteLine($"Computed Signature: {computedSignature}");
-
-            // Extract v1 signature from received signatures
-            var receivedSignature = svixSignature.Split(',')
-                .FirstOrDefault(part => part.StartsWith("v1="))
-                ?.Replace("v1=", "").Trim();
-            if (string.IsNullOrEmpty(receivedSignature))
+            var webhookSecret = _configuration["Clerk:WebhookSecret"];
+            if (string.IsNullOrEmpty(webhookSecret))
             {
-                Console.WriteLine("No v1 signature found.");
-                return false;
+                return BadRequest("Webhook secret is not configured.");
             }
 
-            Console.WriteLine($"Received Signature: {receivedSignature}");
+            var requestBody = await new StreamReader(Request.Body).ReadToEndAsync();
+            var svixId = Request.Headers["svix-id"].ToString();
+            var svixTimestamp = Request.Headers["svix-timestamp"].ToString();
+            var svixSignature = Request.Headers["svix-signature"].ToString();
 
-            // Secure comparison
-            var isValid = CryptographicOperations.FixedTimeEquals(
-                Encoding.UTF8.GetBytes(receivedSignature),
-                Encoding.UTF8.GetBytes(computedSignature)
-            );
+            if (string.IsNullOrEmpty(svixId) || string.IsNullOrEmpty(svixTimestamp) || string.IsNullOrEmpty(svixSignature))
+            {
+                return BadRequest("Missing webhook headers.");
+            }
+            
+            WebHeaderCollection webHeaders = new WebHeaderCollection();
+            foreach (var header in Request.Headers)
+            {
+                webHeaders[header.Key] = header.Value.ToString();
+            }
 
-            Console.WriteLine($"Signature Valid: {isValid}");
-            return isValid;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error in signature verification: {ex.Message}");
-            return false;
+            try
+            {
+                var webhook = new Webhook(webhookSecret);
+                webhook.Verify(requestBody, webHeaders); // Verifikacija bez vraćanja payload-a
+
+                Console.WriteLine($"RequestBody: {requestBody}");
+
+                var webhookEvent = JsonSerializer.Deserialize<ClerkWebhookEvent>(requestBody);
+                
+                if (webhookEvent?.Data == null)
+                {
+                    return BadRequest("Invalid webhook payload or missing data.");
+                }
+
+                if (webhookEvent.Type == "user.created")
+                {
+                    var email = webhookEvent.Data?.EmailAddresses.FirstOrDefault()?.Email;
+
+
+                    if (string.IsNullOrEmpty(email))
+                    {
+                        return BadRequest("Email address is missing.");
+                    }
+
+                    var user = new User
+                    {
+                        Email = email,
+                        FirstName = webhookEvent.Data.FirstName,
+                        LastName = webhookEvent.Data.LastName,
+                        ClerkId = webhookEvent.Data.Id,
+                        UserName = email
+                    };
+
+                    var result = await _userManager.CreateAsync(user);
+
+                    if (result.Succeeded)
+                    {
+                        var roleResult = await _userManager.AddToRoleAsync(user, "Guest");
+                        
+                        var updateSuccess = await _clerkService.UpdateUserMetadataAsync(user.ClerkId, new Guid(user.Id));
+                        
+                        if (!updateSuccess)
+                        {
+                            return StatusCode(500, "Failed to update Clerk metadata.");
+                        }
+                        
+                        if (!roleResult.Succeeded)
+                        {
+                            return BadRequest(
+                                $"Role assignment failed: {string.Join(", ", roleResult.Errors.Select(e => e.Description))}");
+                        }
+
+                        return Ok("User successfully created and assigned role.");
+
+                    }
+                }
+                else
+                {
+                    return Ok("Event type not handled.");
+                }
+
+                return Ok("Webhook processed successfully.");
+            }
+            catch (WebhookVerificationException)
+            {
+                return Unauthorized("Invalid webhook signature.");
+            }
+            catch (Exception ex)
+            {
+                // Zabilježiti grešku
+                Console.WriteLine($"Internal server error : {ex.ToString()}");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
-
 }
-
-public class ClerkWebhookEvent
-{
-    public string Type { get; set; }
-    public ClerkUserData Data { get; set; }
-    public EventAttributes EventAttributes { get; set; }
-    public long Timestamp { get; set; }
-    public string Object { get; set; }
-}
-
-public class ClerkUserData
-{
-    public string Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string ImageUrl { get; set; }
-    public bool HasImage { get; set; }
-    public bool Banned { get; set; }
-    public bool Locked { get; set; }
-    
-    // Ensure EmailAddresses is defined as a list of EmailAddress objects
-    public List<EmailAddress> EmailAddresses { get; set; } 
-}
-
-public class EmailAddress
-{
-    public string EmailAddresss { get; set; }
-    public string Id { get; set; }
-    public List<LinkedAccount> LinkedTo { get; set; }
-    public string Object { get; set; }
-    public bool Reserved { get; set; }
-    public Verification Verification { get; set; }
-}
-
-public class LinkedAccount
-{
-    public string Id { get; set; }
-    public string Type { get; set; }
-}
-
-public class Verification
-{
-    public string Status { get; set; }
-    public string Strategy { get; set; }
-    public int? Attempts { get; set; }
-    public long? ExpireAt { get; set; }
-}
-
-public class EventAttributes
-{
-    public HttpRequest HttpRequest { get; set; }
-}
-
-public class HttpRequest
-{
-    public string ClientIp { get; set; }
-    public string UserAgent { get; set; }
-}
-

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fonsion.be.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daa817dc3cd4b85fc331e7098c5d1d36d045a2ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9570d1d72f0e440774979a90749320248135049")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fonsion.be.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fonsion.be.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

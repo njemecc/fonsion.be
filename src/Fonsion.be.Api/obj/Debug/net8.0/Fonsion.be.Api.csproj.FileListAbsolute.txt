@@ -253,3 +253,5 @@ C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Micros
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Polly.dll
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Svix.dll
