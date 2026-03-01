@@ -237,11 +237,6 @@ C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\Fonsio
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\Fonsion.be.Api.sourcelink.json
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets\msbuild.Fonsion.be.Api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.Fonsion.be.Api.props
-C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Fonsion.be.Api.props
-C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Fonsion.be.Api.props
-C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\scopedcss\bundle\Fonsion.be.Api.styles.css
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\Fonsion..0F3F4761.Up2Date
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\Fonsion.be.Api.dll
@@ -255,3 +250,10 @@ C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Newton
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Polly.dll
 C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Svix.dll
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\bin\Debug\net8.0\Fonsion.be.Api.staticwebassets.endpoints.json
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\njeme\Master\fpis\fonsion.be\src\Fonsion.be.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
