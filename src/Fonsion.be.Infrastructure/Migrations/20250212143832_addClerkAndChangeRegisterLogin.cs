@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -26,7 +26,8 @@ namespace Fonsion.be.Infrastructure.Migrations
                 name: "ClerkId",
                 table: "AspNetUsers",
                 type: "longtext",
-                nullable: false)
+                nullable: false,
+                defaultValue: "")
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
