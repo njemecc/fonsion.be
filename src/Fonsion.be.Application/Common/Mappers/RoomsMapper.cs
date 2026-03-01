@@ -5,7 +5,6 @@ namespace Fonsion.be.Application.Common.Mappers;
 
 public static class RoomsMapper
 {
-
     public static Room FromRequestToModel(this CreateRoomRequest createRoomRequest)
     {
         return new Room()

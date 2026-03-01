@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Fonsion.be.Api.props" />
-</Project>

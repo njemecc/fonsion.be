@@ -50,6 +50,7 @@ builder.Services.AddControllers();
 
 //add application and infrastructure dependencies
 var connectionString = builder.Configuration.GetConnectionString("MysqlConnection");
+
 if (connectionString != null) builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddApplication();
 
